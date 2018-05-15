@@ -73,7 +73,7 @@ export default class markerGenerator extends React.Component{
       if(this.state.startIndex === i){
         //Changing to green
         iconType = L.icon({
-          iconUrl: require('./green-icon.png'),
+          iconUrl: require('./green-pointer.png'),
           iconSize: new L.Point(15,30)
         });
 
@@ -82,7 +82,7 @@ export default class markerGenerator extends React.Component{
       }else if(this.state.endIndex === i){
         //Changing to red
         iconType = L.icon({
-          iconUrl: require('./red-icon.png'),
+          iconUrl: require('./red-pointer.png'),
           iconSize: new L.Point(15,30)
         });
 
@@ -91,7 +91,7 @@ export default class markerGenerator extends React.Component{
       }else{
         //Changing to blue
         iconType = L.icon({
-          iconUrl: require('./blue-icon.png'),
+          iconUrl: require('./blue-pointer.png'),
           iconSize: new L.Point(15,30)
         });
 
