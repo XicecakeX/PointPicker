@@ -34,3 +34,15 @@ The `points.js` file should be placed into the `.src/` folder in order to be rea
 The screen capture below shows the app when it is first started up:
 
 ![Initial start](./initialStart.png)
+
+### Selecting Start/End Points
+
+Start/End points can be selected by two different methods. The first is just selecting the points individually by clicking on them. The more fluent method is using the given slider to quickly find points, especially if there are a bunch of them.
+
+#### Clicking A Marker
+
+Upon clicking on any marker, a popup will appear with all the properties of that selected point. The latitude, longitude, and time are displayed in the popup. Below the properties, there are two buttons, `Start` and `End`.
+
+![Popup](./popup.png)
+
+#### Using the Slider
