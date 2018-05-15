@@ -5,7 +5,6 @@ import './markerGenerator.css';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import 'leaflet/dist/leaflet.css';
-
 const Range = Slider.Range;
 
 export default class markerGenerator extends React.Component{
@@ -75,7 +74,7 @@ export default class markerGenerator extends React.Component{
       if(this.state.startIndex === i){
         //Changing to green
         iconType = L.icon({
-          iconUrl: require('./green-pointer.png'),
+          iconUrl: require('./icons/green-pointer.png'),
           iconSize: new L.Point(15,30)
         });
 
@@ -84,7 +83,7 @@ export default class markerGenerator extends React.Component{
       }else if(this.state.endIndex === i){
         //Changing to red
         iconType = L.icon({
-          iconUrl: require('./red-pointer.png'),
+          iconUrl: require('./icons/red-pointer.png'),
           iconSize: new L.Point(15,30)
         });
 
@@ -93,7 +92,7 @@ export default class markerGenerator extends React.Component{
       }else{
         //Changing to blue
         iconType = L.icon({
-          iconUrl: require('./blue-pointer.png'),
+          iconUrl: require('./icons/blue-pointer.png'),
           iconSize: new L.Point(15,30)
         });
 
@@ -210,7 +209,7 @@ export default class markerGenerator extends React.Component{
     return(
       <div>
         <div>
-          <Map center = {pos} zoom = {13}>
+          <Map center = {pos} zoom = {17}>
             <TileLayer
               attribution = "&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
                 url = "http://{s}.tile.osm.org/{z}/{x}/{y}.png"/>
@@ -226,18 +225,10 @@ export default class markerGenerator extends React.Component{
                   <Range
                     step = {1}
                     value = {[this.state.startIndex, this.state.endIndex]}
-                    id = "slider1"
                     min = {0}
                     max = {this.props.points.length - 1}
-                    allowCross = {false}
-                    pushable
-                    trackStyle = {[
-                      {backgroundColor: "blue"}
-                    ]}
-                    handleStyle = {[
-                      {backgroundColor: "green"},
-                      {backgroundColor: "red"}
-                    ]}
+                    trackStyle = {[{backgroundColor: "blue"}]}
+                    handleStyle = {[{backgroundColor: "green"}, {backgroundColor: "red"}]}
                     railStyle = {{
                       backgroundColor: "black"
                     }}

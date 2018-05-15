@@ -5,7 +5,8 @@ body {
 }
 
 .leaflet-container{
-  height: 700px;
+  height: 650px;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
