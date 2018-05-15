@@ -3,9 +3,25 @@ import {Map, TileLayer, Marker, Popup} from 'react-leaflet';
 import L from 'leaflet';
 import './markerGenerator.css';
 import Slider from 'rc-slider';
+import Tooltip from 'rc-tooltip';
 import 'rc-slider/assets/index.css';
 import 'leaflet/dist/leaflet.css';
 const Range = Slider.Range;
+const Handle = Slider.Handle;
+
+const myHandle = ({value, dragging, index, ...restProps}) => {
+  return(
+    <Tooltip
+      overlay = {value}
+      prefixCls = "rc-slider-tooltip"
+      visible = {dragging}
+      placement = "top"
+      key = {index}
+    >
+      <Handle {...restProps} />
+    </Tooltip>
+  )
+}
 
 export default class markerGenerator extends React.Component{
   /**Default Constructor*/
@@ -228,6 +244,7 @@ export default class markerGenerator extends React.Component{
                     min = {0}
                     max = {this.props.points.length - 1}
                     trackStyle = {[{backgroundColor: "blue"}]}
+                    handle = {myHandle}
                     handleStyle = {[{backgroundColor: "green"}, {backgroundColor: "red"}]}
                     railStyle = {{
                       backgroundColor: "black"
