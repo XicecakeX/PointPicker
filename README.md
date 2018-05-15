@@ -25,4 +25,12 @@ module.exports = [
 ]
 ```
 
+The `points.js` file should be placed into the `.src/` folder in order to be read.
+
 ## How to Use
+
+### Initial Start
+
+The screen capture below shows the app when it is first started up:
+
+![Initial start](./initialStart.png)
