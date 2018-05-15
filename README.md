@@ -12,4 +12,18 @@ PointPicker is an application that utilizes the `React.js` and `Leaflet.js` libr
 
 ## Prerequisites
 
+A `points.js` file is needed to map all the points. The file consists of only an array of coordinates with the following attributes: latitude, longitude, and time. The file syntax is as follows:
+
+### `points.js`
+
+```js
+module.exports = [
+  {"latitude": ##.#######, "longitude": ##.#######, "time": "00:00:00 UTC"},
+  {"latitude": ##.#######, "longitude": ##.#######, "time": "00:00:00 UTC"},
+  {"latitude": ##.#######, "longitude": ##.#######, "time": "00:00:00 UTC"},
+  {"latitude": ##.#######, "longitude": ##.#######, "time": "00:00:00 UTC"},
+  {"latitude": ##.#######, "longitude": ##.#######, "time": "00:00:00 UTC"},
+]
+```
+
 ## How to Use
