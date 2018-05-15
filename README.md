@@ -33,7 +33,7 @@ The `points.js` file should be placed into the `.src/` folder in order to be rea
 
 The screen capture below shows the app when it is first started up:
 
-![Initial start](./initialStart.png)
+![Initial start](./images/initialStart.png)
 
 ### Selecting Start/End Points
 
@@ -43,13 +43,13 @@ Start/End points can be selected by two different methods. The first is just sel
 
 Upon clicking on any marker, a popup will appear with all the properties of that selected point. The latitude, longitude, and time are displayed in the popup. Below the properties, there are two buttons, `Start` and `End`.
 
-![Popup](./popup.png)
+![Popup](./images/popup.png)
 
 As you notice from the example image above, you can see that the `Start` button is disabled. This is because the point selected is after the selected end point. The same goes for the `End` button, which is disabled on any point before the selected start point. Any markers in between the start and end points can be made either a start/end point.
 
 The image below shows what occurs after an end point is selected using this method.
 
-![Manual end point selection](./manualSelection.png)
+![Manual end point selection](./images/manualSelection.png)
 
 You can see that the selected point now turns red and the previous end point turns blue. This is how you can select start/end points by clicking on an individual marker.
 
