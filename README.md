@@ -45,4 +45,12 @@ Upon clicking on any marker, a popup will appear with all the properties of that
 
 ![Popup](./popup.png)
 
+As you notice from the example image above, you can see that the `Start` button is disabled. This is because the point selected is after the selected "End" point. The same goes for the `End` button, which is disabled on any point before the selected "Start" point. Any markers in between the "Start" and "End" points can be made either a start/end point.
+
+The image below shows what occurs after an "End" point is selected using this method.
+
+![Manual end point selection](./manualSelection.png)
+
+You can see that the selected point now turns red and the previous "End" point turns blue. This is how you can select start/end points by clicking on an individual marker.
+
 #### Using the Slider
