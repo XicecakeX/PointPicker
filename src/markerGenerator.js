@@ -1,5 +1,9 @@
 import React from 'react';
-import {Map, TileLayer, Marker, Popup} from 'react-leaflet';
+import {Map, TileLayer} from 'react-leaflet';
+import Marker1 from "./markers/marker1";
+import Marker2 from "./markers/marker2";
+import Marker3 from "./markers/marker3";
+import Marker4 from "./markers/marker4";
 import L from 'leaflet';
 import './markerGenerator.css';
 import Slider from 'rc-slider';
@@ -127,89 +131,44 @@ export default class markerGenerator extends React.Component{
       //Checking type
       if(type === 1){
         //Creating new marker
-        markers.push(
-          <Marker position = {pos} key = {i} icon = {iconType}>
-            <Popup>
-              <span>
-                Latitude: {points[i].latitude} <br />
-                Longitude: {points[i].longitude} <br />
-                Time: {points[i].time} <br />
-                <div className = "center">
-                  <input type = "button" disabled value = "Start" onClick = {() => {this.clickedMarker(points[i], i, "start")}}/>
-                  <input type = "button" disabled value = "End" onClick = {() => {this.clickedMarker(points[i], i, "end")}}/>
-                </div>
-              </span>
-            </Popup>
-          </Marker>
-        )
+        markers.push(<Marker1
+          index = {i}
+          points = {points}
+          pos = {pos}
+          icon = {iconType}
+          handleMarker = {(point, index, type) => {this.clickedMarker(point, index, type)}} />);
       }else if(type === 2){
         //Creating new marker
-        markers.push(
-          <Marker position = {pos} key = {i} icon = {iconType}>
-            <Popup>
-              <span>
-                Latitude: {points[i].latitude} <br />
-                Longitude: {points[i].longitude} <br />
-                Time: {points[i].time} <br />
-                <div className = "center">
-                  <input type = "button" disabled value = "Start" onClick = {() => {this.clickedMarker(points[i], i, "start")}}/>
-                  <input type = "button" disabled value = "End" onClick = {() => {this.clickedMarker(points[i], i, "end")}}/>
-                </div>
-              </span>
-            </Popup>
-          </Marker>
-        )
+        markers.push(<Marker1
+          index = {i}
+          points = {points}
+          pos = {pos}
+          icon = {iconType}
+          handleMarker = {(point, index, type) => {this.clickedMarker(point, index, type)}} />);
       }else if(type === 3){
         //Creating new marker
-        markers.push(
-          <Marker position = {pos} key = {i} icon = {iconType}>
-            <Popup>
-              <span>
-                Latitude: {points[i].latitude} <br />
-                Longitude: {points[i].longitude} <br />
-                Time: {points[i].time} <br />
-                <div className = "center">
-                  <input type = "button" disabled value = "Start" onClick = {() => {this.clickedMarker(points[i], i, "start")}}/>
-                  <input type = "button" value = "End" onClick = {() => {this.clickedMarker(points[i], i, "end")}}/>
-                </div>
-              </span>
-            </Popup>
-          </Marker>
-        )
+        markers.push(<Marker2
+          index = {i}
+          points = {points}
+          pos = {pos}
+          icon = {iconType}
+          handleMarker = {(point, index, type) => {this.clickedMarker(point, index, type)}} />);
       }else if(type === 4){
         //Creating new marker
-        markers.push(
-          <Marker position = {pos} key = {i} icon = {iconType}>
-            <Popup>
-              <span>
-                Latitude: {points[i].latitude} <br />
-                Longitude: {points[i].longitude} <br />
-                Time: {points[i].time} <br />
-                <div className = "center">
-                  <input type = "button" value = "Start" onClick = {() => {this.clickedMarker(points[i], i, "start")}}/>
-                  <input type = "button" disabled value = "End" onClick = {() => {this.clickedMarker(points[i], i, "end")}}/>
-                </div>
-              </span>
-            </Popup>
-          </Marker>
-        )
+        markers.push(<Marker3
+          index = {i}
+          points = {points}
+          pos = {pos}
+          icon = {iconType}
+          handleMarker = {(point, index, type) => {this.clickedMarker(point, index, type)}} />);
       }else{
         //Creating new marker
-        markers.push(
-          <Marker position = {pos} key = {i} icon = {iconType}>
-            <Popup>
-              <span>
-                Latitude: {points[i].latitude} <br />
-                Longitude: {points[i].longitude} <br />
-                Time: {points[i].time} <br />
-                <div className = "center">
-                  <input type = "button" value = "Start" onClick = {() => {this.clickedMarker(points[i], i, "start")}}/>
-                  <input type = "button" value = "End" onClick = {() => {this.clickedMarker(points[i], i, "end")}}/>
-                </div>
-              </span>
-            </Popup>
-          </Marker>
-        )
+        markers.push(<Marker4
+          index = {i}
+          points = {points}
+          pos = {pos}
+          icon = {iconType}
+          handleMarker = {(point, index, type) => {this.clickedMarker(point, index, type)}} />);
       }
     }
     //Returning marker array
