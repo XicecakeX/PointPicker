@@ -22,9 +22,10 @@ export default class page extends React.Component{
 
   render(){
     return(
-      <MarkerGenerator points = {points}
+      <MarkerGenerator
+        points = {points}
         onSelectStartPoint = {(point) => {this.selectedStart(point)}}
-        onSelectEndPoint = {this.selectedEnd}/>
+        onSelectEndPoint = {this.selectedEnd} />
     )
   }
 }
